@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ISKRA</title>
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +15,7 @@
                     <div class="nav-list">
                         <a href="#about">О нас</a>
                         <a href="#galery">Галерея</a>
-                        <a href="#cups">Награды</a>
+                        <a href="#awards">Награды</a>
                         <a href="#contacts">Контакты</a>
                     </div>
                 </div>
@@ -33,7 +32,7 @@
 
                 <div class="block about" id="about">
                     <div class="container">
-                        <div class="img logo"></div>
+                        <div class="img mask"></div>
                         <div class="block-text flexible">
                             <p class="title">Драматический театр-студия <span class="vip">«ИСКРА»</span></p>
                             <p>- это место для самовыражения ярких, увлеченных, жаждущих творить детей разных возрастов!</p>
@@ -151,10 +150,13 @@
                     </div>
                 </div>
 
-                <div class="block awards">
+                <div class="block awards" id="awards">
                     <div class="container awards-flex">
                         <section class="awards-section">
-                            <div class="awards-title">НАГРАДЫ И ДИПЛОМЫ</div>
+                            <div class="awards-header">
+                                ТЕАТР ИСКРА РЕГУЛЯРНО ПРИНИМАЕТ УЧАСТИЕ В МЕЖДУНАРОДНЫХ КОНКУРСАХ И ФЕСТИВАЛЯХ
+                            </div>
+                            <div class="awards-title">НАШИ НАГРАДЫ</div>
                             <div class="awards-envelope-bg">
                                 <div class="awards-carousel" id="awards-carousel">
                                     <img src="img/11.jpg" alt="Диплом 1">
@@ -169,8 +171,8 @@
                                     <img src="img/20.jpg" alt="Диплом 10">
                                     <img src="img/21.jpg" alt="Диплом 11">
                                 </div>
-                                <button class="carousel-arrow left" type="button" aria-label="Влево"></button>
-                                <button class="carousel-arrow right" type="button" aria-label="Вправо"></button>
+                                <button class="carousel-arrow2 left" type="button" aria-label="Влево"></button>
+                                <button class="carousel-arrow2 right" type="button" aria-label="Вправо"></button>
                             </div>
                         </section>
                     </div>
@@ -240,28 +242,31 @@
         });
         document.addEventListener('DOMContentLoaded', function() {
             const carousel = document.getElementById('awards-carousel');
-            const left  = document.querySelector('.carousel-arrow.left');
-            const right = document.querySelector('.carousel-arrow.right');
-            const scrollStep = 350; // px
+            const left  = document.querySelector('.carousel-arrow2.left');
+            const right = document.querySelector('.carousel-arrow2.right');
+            const scrollStep = carousel.offsetWidth * 0.75; // шаг = 75% ширины видимой области
 
             function updateArrows() {
-                if(!left || !right) return;
-                left.style.visibility = (carousel.scrollLeft > 10) ? 'visible' : 'hidden';
-                right.style.visibility = (carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth - 10) ? 'visible' : 'hidden';
+                if (!left || !right || !carousel) return;
+                // округляем до 1px, чтобы не было эффекта "почти в конце"
+                const maxScroll = Math.ceil(carousel.scrollWidth - carousel.clientWidth - 2);
+                left.style.visibility = (carousel.scrollLeft > 1) ? 'visible' : 'hidden';
+                right.style.visibility = (carousel.scrollLeft < maxScroll) ? 'visible' : 'hidden';
             }
 
             left?.addEventListener('click', () => {
                 carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-                setTimeout(updateArrows, 400);
+                setTimeout(updateArrows, 500);
             });
             right?.addEventListener('click', () => {
                 carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
-                setTimeout(updateArrows, 400);
+                setTimeout(updateArrows, 500);
             });
 
             carousel.addEventListener('scroll', updateArrows);
-            updateArrows();
             window.addEventListener('resize', updateArrows);
+
+            setTimeout(updateArrows, 200);
         });
     </script>
 </body>

@@ -203,9 +203,6 @@ footer {
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     -webkit-backface-visibility: hidden;
-    -moz-backface-visibility: hidden;
-    -webkit-transform: translate3d(0, 0, 0);
-    -moz-transform: translate3d(0,0,0);
     width: 50%;
 }
 
@@ -274,6 +271,22 @@ footer {
     background-image: url('img/IskraKids.png');
     aspect-ratio: 1407 / 2416;
 }
+.img.logo {
+    width: 200px;
+    height: 80px;
+    background-image: url('img/IskraLogo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.img.mask {
+    width: 100px;
+    height: 100px;
+    background-image: url('img/IskraMask.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 
 .column-wrapper .content {
     position: relative;
@@ -294,7 +307,7 @@ footer {
 .first-block-container {
     background-image: url('img/mainImgDark.png');
     background-size: cover;
-    background-position: 0% 60%;
+    background-position: 0 60%;
     width: 100%;
     height: 100vh;
     position: relative;
@@ -306,12 +319,12 @@ footer {
     justify-content: flex-end;
     height: 90%;
     gap: 10px;
-    padding: 0px 0px 0px 40px;
+    padding: 0 0 0 40px;
 }
 
 .first-block-text p{
     color: #fff;
-    margin: 0px;
+    margin: 0;
 }
 
 .first-block-text1{
@@ -320,121 +333,6 @@ footer {
 
 .first-block-text2{
     font-size: 80px;
-}
-
-/* second-block */
-
-.second-block{
-    padding-top: 150px;
-}
-
-.second-block-container{
-    width: 100%;
-    display: flex;
-    /* min-height: 70vh; */
-    align-items: center;
-}
-
-.second-block-image-container{
-    width: 25%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.second-block-text-container{
-    width: 50%;
-    padding: 0px 200px;
-}
-
-.second-block-text-container p{
-    font-size: 22px;
-    line-height: 140%;
-    text-align: justify;
-}
-
-.second-block-text-container p span{
-    color: red;
-}
-
-.second-block-image-container-2{
-    width: 20%;
-    height: 70vh;
-    background-image: url('img/IskraFlashlight.jpg');
-    background-size: cover;
-    background-position: 0% 60%;
-}
-
-.second-block-image-1, .img.logo {
-    width: 200px;
-    height: 80px;
-    background-image: url('img/IskraLogo.png');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.second-block-image-2{
-    margin: 0px 30px 0px 0px;
-    width: 100%;
-    height: 100%;
-    background-image: url('img/IskraFlashlight.jpg');
-    background-size: cover;
-    background-position: 0% 0%;
-}
-
-/* third-block */
-
-.third-block{
-    /* padding: 80px 0px; */
-}
-
-.third-block-container{
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.third-block-image-container{
-    width: 30%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.third-block-text-container{
-    width: 40%;
-    padding: 0px 30px;
-}
-
-.third-block-text-container p{
-    font-size: 22px;
-    line-height: 140%;
-    text-align: justify;
-}
-
-.third-block-text-container p span{
-    color: red;
-}
-
-.third-block-image-1{
-    margin: 0px 50px 0px 0px;
-    width: 50%;
-    height: 100%;
-    background-image: url('img/IskraBalcony.png');
-    background-size: contain; 
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.third-block-image-2{
-    margin: 0px 30px 0px 0px;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: 0% 0%;
 }
 
 /* fourth-block */
@@ -454,7 +352,7 @@ footer {
 }
 
 .fourth-block-title-container p{
-    margin: 0px;
+    margin: 0;
     font-size: 40px;
     font-weight: 600;
     text-transform: uppercase;
@@ -469,7 +367,7 @@ footer {
     width: 70%;
     display: flex;
     justify-content: end;
-    padding: 0px 30px 0px 0px;
+    padding: 0 30px 0 0;
 }
 
 .fourth-block-text-subcontainer{
@@ -479,7 +377,7 @@ footer {
 }
 
 .fourth-block-text-subcontainer p{
-    margin: 0px 90px 0px 0px;
+    margin: 0 90px 0 0;
     font-size: 22px;
     line-height: 140%;
 }
@@ -490,16 +388,14 @@ footer {
 
 .fourth-block-btn-container{
     width: 100%;
-    padding: 110px 0px 0px 0px;
+    padding: 110px 0 0;
     display: flex;
     justify-content: end;
 }
 
 .fourth-block-button {
-    font-family: 'Montserrat';
     padding: 12px 24px;
     border: none;
-    /* border: 2px solid rgb(119, 0, 0); */
     border-radius: 20px; 
     font-size: 16px;
     font-weight: 600;
@@ -508,16 +404,8 @@ footer {
     position: relative;
     overflow: hidden;
     transition: all 0.3s ease;
-
     background-color: #ff3636;
-  
-  /* background: linear-gradient(
-    190deg, 
-    rgba(255, 0, 0, 0.7) 0%, 
-    rgba(255, 255, 255, 0.2) 100%
-  ); */
-  
-     box-shadow: 0px 0px 20px rgba(255, 0, 0, 0.5); 
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
 }
 
 .fourth-block-img-container{
@@ -537,24 +425,6 @@ footer {
     background-repeat: no-repeat;
 }
 
-/* fifth-block */
-
-.fifth-block{
-    width: 100%;
-    height: 10vh;
-    /* background-image: url('img/IskraKids.jpeg'); */
-    background-size: hidden; 
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.fifth-block-container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /* sixth-block */
 
 .sixth-block{
@@ -564,7 +434,6 @@ footer {
 .sixth-block-container{
     width: 100%;
     display: flex;
-    /* align-items: center; */
 }
 
 .sixth-block-image-container{
@@ -572,7 +441,6 @@ footer {
     height: 50vh;
     display: flex;
     justify-content: center;
-    /* align-items: center; */
 }
 
 .sixth-block-text-container{
@@ -591,21 +459,21 @@ footer {
 }
 
 .sixth-block-image-1{
-    margin: 0px 0px 0px 30px;
+    margin: 0 0 0 30px;
     width: 100%;
     height: 80%;
     background-image: url('img/IskraClown.jpg');
-    background-size: contain; 
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .sixth-block-image-2{
-    margin: 0px 30px 0px 0px;
+    margin: 0 30px 0 0;
     width: 100%;
     height: 100%;
     background-size: cover;
-    background-position: 0% 0%;
+    background-position: 0 0;
 }
 
 /* ANONS */
@@ -766,6 +634,13 @@ footer {
     text-align: center;
 }
 
+.awards-header {
+    font-size: 2em;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+    letter-spacing: 0.02em;
+}
+
 .awards-title {
     color: #d72d2d;
     font-size: 2.2em;
@@ -776,7 +651,7 @@ footer {
 
 .awards-envelope-bg {
     position: relative;
-    background: none;
+    background: red;
     width: 100%;
     max-width: 1120px;
     margin: 0 auto;
@@ -785,21 +660,6 @@ footer {
     align-items: flex-end;
     justify-content: center;
     padding-bottom: 2.5em;
-    /* Псевдоэлемент для "конверта" */
-}
-.awards-envelope-bg::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 260px;
-    background: repeating-linear-gradient(165deg, #c21d23 0 15px, #d22a2a 30px, #c21d23 50px);
-    background-blend-mode: multiply;
-    border-radius: 0 0 64px 64px/0 0 180px 180px;
-    clip-path: polygon(0 100%, 100% 100%, 50% 0);
-    z-index: 1;
-    filter: brightness(1.08) contrast(1.1);
-    box-shadow: 0 10px 38px -12px #900a12 inset;
 }
 
 .awards-carousel {
@@ -835,7 +695,7 @@ footer {
 }
 
 /* Стрелки */
-.carousel-arrow {
+.carousel-arrow2 {
     display: none;
     position: absolute;
     top: 50%;
@@ -854,32 +714,32 @@ footer {
     justify-content: center;
     opacity: 0.93;
 }
-.carousel-arrow.left  { left: 0.4em;  }
-.carousel-arrow.right { right: 0.4em; }
-.carousel-arrow:after {
+.carousel-arrow2.left  { left: 0.4em;  }
+.carousel-arrow2.right { right: 0.4em; }
+.carousel-arrow2:after {
     content: '';
     display: inline-block;
     width: 18px; height: 18px;
     border-top: 3px solid #d72d2d;
     border-right: 3px solid #d72d2d;
 }
-.carousel-arrow.left:after  {
+.carousel-arrow2.left:after  {
     transform: rotate(-135deg);
     margin-left: 8px;
 }
-.carousel-arrow.right:after {
+.carousel-arrow2.right:after {
     transform: rotate(45deg);
     margin-right: 8px;
 }
-.carousel-arrow:active,
-.carousel-arrow:focus-visible {
+.carousel-arrow2:active,
+.carousel-arrow2:focus-visible {
     background: #fbe7e7;
     outline: none;
 }
 
 /* Показывать стрелки только на десктопе */
 @media (min-width: 900px) {
-    .carousel-arrow {
+    .carousel-arrow2 {
         display: flex;
     }
 }
