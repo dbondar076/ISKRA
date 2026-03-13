@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,393 +9,685 @@
     <meta name="keywords" content="театр-студия ИСКРА, детский театр Минск, драматическая студия для детей, театральные занятия для детей, театральный детский коллектив, детский драматический театр, детская театральная драматическая студия, детское театральное творчество, детское сценическое искусство, детское театральное развитие, детский театр, занятия театром для детей, детская театральная школа, детская театральная школа-студия, занятия сценическому искусству для детей, куда записать Ребёнка на занятия театром, детский театральный кружок, сценическое мастерство, спектакли для детей, концерты, новогодние представления, фотосессии, видеоролики, театральные миниатюры, актерское мастерство Минск, театральная школа, награды театра, участие в конкурсах и фестивалях, развитие детей дошкольного возраста, развитие детей младшего школьного возраста, кружки для дошкольников Минск, развитие креативности, развитие творческих способностей, развитие коммуникативной компетентности, психологическая устойчивость, развитие уверенности в себе, формирование самооценки, развитие памяти, развитие мышления, развитие речи, умение говорить, выступления на публике, развитие внимания, развитие личности ребенка, развитие коммуникативных способностей, развитие умения общаться, преодолеть трудности ребенка в общении, развитие личности, детские постановки, проспект Машерова 11, детские кружки Минск, творческое развитие детей, театр для подростков, театральная труппа">
     <meta name="robots" content="index, follow">
 
-    <!-- Open Graph / Facebook / VK -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Детский драматический театр-студия «ИСКРА»">
-    <meta property="og:description" content="Театр-студия «ИСКРА» — занятия по сценическому мастерству, спектакли, концерты, фотосессии и участие в международных фестивалях. Минск, пр-т Машерова 11.">
-    <meta property="og:image" content="http://zavadatar.com/ISKRA/img/Promo.jpg">
-    <meta property="og:url" content="http://zavadatar.com/ISKRA/">
-    <meta property="og:locale" content="ru_RU">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Детский драматический театр-студия «ИСКРА»">
-    <meta name="twitter:description" content="Театр-студия «ИСКРА» — занятия по сценическому мастерству, спектакли, концерты, фотосессии и участие в международных фестивалях. Минск, пр-т Машерова 11.">
-    <meta name="twitter:image" content="http://zavadatar.com/ISKRA/img/Promo.jpg">
-
     <title>ISKRA</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.optimized.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="fonts/FuturaCyrillicBook.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/FuturaCyrillicMedium.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="fonts/KoskoBold-Bold.ttf" as="font" type="font/ttf" crossorigin>
 </head>
 <body>
     <div class="wrapper">
-         <main>
-            <header>
-                <div class="container">
-                    <div class="nav-list">
-                        <a href="#about">О нас</a>
-                        <a href="#gallery">Галерея</a>
-                        <a href="#awards">Награды</a>
-                        <a href="#contacts">Контакты</a>
-                    </div>
+        <header class="topbar" id="topbar">
+            <a class="topbar__ig" href="https://instagram.com/teatr_iskra" target="_blank" rel="noopener">
+                <span class="topbar__ig-icon mi">photo_camera</span>
+                <span class="topbar__ig-text">Instagram: @teatr_iskra</span>
+            </a>
+
+            <button
+                    class="topbar__menu-btn"
+                    id="menuToggle"
+                    type="button"
+                    aria-label="Открыть меню"
+                    aria-expanded="false"
+                    aria-controls="mobileMenu"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <nav class="topbar__nav" id="mobileMenu" aria-label="Главное меню" hidden>
+            <a href="#about">О нас</a>
+            <a href="#awards">Награды</a>
+            <a href="#invitation">Новый сезон</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#schedule">Расписание</a>
+            <a href="#rent">Аренда</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+
+        <section class="hero" id="home">
+            <div class="hero__inner container">
+                <nav class="hero__menu" aria-label="Главное меню">
+                    <a href="#about" class="hero__menu-link">О нас</a>
+                    <a href="#awards" class="hero__menu-link">Награды</a>
+                    <a href="#invitation" class="hero__menu-link">Новый сезон</a>
+                    <a href="#gallery" class="hero__menu-link">Галерея</a>
+                    <a href="#schedule" class="hero__menu-link">Расписание</a>
+                    <a href="#rent" class="hero__menu-link">Аренда</a>
+                    <a href="#contact" class="hero__menu-link">Контакты</a>
+                </nav>
+
+                <ul class="hero-stats" aria-label="Факты о студии">
+                    <li class="stat">
+                        <span class="stat__icon mi" aria-hidden="true">theater_comedy</span>
+                        <div class="stat__num">10+</div>
+                        <div class="stat__label">Лет</div>
+                    </li>
+
+                    <li class="stat">
+                        <span class="stat__icon mi" aria-hidden="true">group</span>
+                        <div class="stat__num">1090+</div>
+                        <div class="stat__label">Учеников</div>
+                    </li>
+
+                    <li class="stat">
+                        <span class="stat__icon mi" aria-hidden="true">workspace_premium</span>
+                        <div class="stat__num">10+</div>
+                        <div class="stat__label">Высших наград</div>
+                    </li>
+                </ul>
+
+                <div class="hero-brand">
+                    <img class="hero-brand__logo" src="img/logo.png" alt="Детский драматический театр-студия «ИСКРА»">
+                    <div class="hero-brand__tag chip-xl">Детский драматический театр-студия</div>
                 </div>
-            </header>
+
+                <a href="https://instagram.com/teatr_iskra" target="_blank" rel="noopener" class="hero-social chip-xl">
+                    <span class="hero-social__icon mi">photo_camera</span>
+                    <span>Instagram: @teatr_iskra</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="about" id="about">
             <div class="container">
-                <div class="block intro">
-                    <div class="first-block-container">
-                        <div class="first-block-text">
-                            <p class="first-block-text2">«ИСКРА»</p>
-                            <p class="first-block-text1">Детский драматический театр-студия</p>
+                <div class="about__title-wrap">
+                    <h2 class="about__title">Детский драматический театр-студия <span class="about__title-accent">«ИСКРА»</span></h2>
+                    <img class="about__star about__star--top" src="img/star.png" alt="" aria-hidden="true">
+                </div>
+
+                <div class="about__content">
+                    <div class="about__col about__col--left">
+                        <p>
+                            Место для <strong>самовыражения</strong><br>
+                            ярких, интересных, увлеченных<br>
+                            детей разных возрастов,<br>
+                            жаждущих <strong>творить</strong>!
+                        </p>
+                    </div>
+
+                    <div class="about__col about__col--right">
+                        <p>
+                            Репертуар, костюмы, методы работы и сам<br>
+                            коллектив театральной студии «ИСКРА»<br>
+                            всегда удивляют <span class="about__text-accent">оригинальностью</span>!
+                        </p>
+
+                        <p>
+                            Это по-настоящему творческая<br>
+                            лаборатория, где у <span class="about__text-accent">каждого</span> есть<br>
+                            возможность проявить свои способности<br>
+                            и неповторимую индивидуальность!
+                        </p>
+                    </div>
+
+                    <div class="about__art">
+                        <img class="about__lamp" src="img/IskraFlashlightVol3.png" alt="" aria-hidden="true">
+                    </div>
+
+                    <img class="about__star about__star--middle" src="img/star.png" alt="" aria-hidden="true">
+                    <img class="about__star about__star--bottom" src="img/star.png" alt="" aria-hidden="true">
+                </div>
+            </div>
+        </section>
+
+        <section class="awards" id="awards">
+            <div class="container">
+                <div class="awards__inner">
+                    <div class="awards__top">
+                        <div class="awards__cup-wrap">
+                            <img class="awards__cup" src="img/cup.png" alt="" aria-hidden="true">
+                            <img class="awards__spark awards__spark--left" src="img/star.png" alt="" aria-hidden="true">
+                            <img class="awards__spark awards__spark--right" src="img/star.png" alt="" aria-hidden="true">
                         </div>
-                    </div>
-                </div>
 
-                <div class="block intro2">
-                    <div class="container">
-                        <div class="img logo"></div>
-                    </div>
-                </div>
-
-                <div class="block about" id="about">
-                    <div class="container">
-                        <div class="img mask"></div>
-                        <div class="block-text flexible">
-                            Детский драматический театр-студия <span class="vip">«ИСКРА»</span><br><br>- это место для самовыражения ярких, интересных, увлеченных<br><span style="text-decoration: underline">_детей разных возрастов</span>, жаждущих творить!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block balcony">
-                    <div class="container">
-                        <div class="img balcony"></div>
-                        <div class="block-text flexible">
-                            Репертуар, костюмы, методы работы и сам коллектив театральной студии <span class="vip">«ИСКРА»</span> всегда удивляют оригинальностью!
-                            <br><br>
-                            Это по-настоящему творческая лаборатория, где у каждого есть возможность проявить свои <span class="highlight" style="text-decoration: underline">способности</span> и неповторимую <span class="highlight" style="text-decoration: underline">индивидуальность</span>!
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block crowd">
-                    <div class="container">
-                        <div class="img crowd"></div>
-                    </div>
-                </div>
-
-                <div class="block boy">
-                    <div class="container">
-                        <div class="img boy"></div>
-                        <div class="block-text flexible">
-                            <p>
-                                В новом юбилейном сезоне театр <span class="vip">«ИСКРА»</span> <span class="bic">приглашает</span>
+                        <div class="awards__text">
+                            <p class="awards__lead"><span>Театр-студия «Искра»</span><br>
+                                регулярно принимает участие в<br>
+                                международных конкурсах и фестивалях!
                             </p>
-                            <p>в <span class="bic">новый просторный зал</span> (пр-т Машерова, 11, 7 этаж)</p>
-                            <p style="margin-bottom:0">
-                                на занятия по сценическому мастерству <span class="vip">детей младшего возраста</span> (от 6 лет)
-                            </p>
+                            <h2 class="awards__title">НАШИ <span>НАГРАДЫ</span>:</h2>
                         </div>
                     </div>
-                </div>
+                    <div class="awards__carousel-wrap">
+                        <button class="awards__arrow awards__arrow--prev" type="button" aria-label="Предыдущая награда">
+                            &#10094;
+                        </button>
 
-                <div class="block anons">
-                    <div class="container anons-flex">
-                        <div class="anons-text-container">
-                            <div class="anons-header"><span style="font-size:1.5em;font-weight:400;">Н</span>а занятиях по сценическому мастерству <span class="colored-letters"><span style="color:#2266d3">Д</span><span style="color:#39b54a">Е</span><span style="color:#ffbc00">Т</span><span style="color:#8e44ad">Е</span><span style="color:#ff6600">Й</span></span> ждут:</div>
-                            <div class="anons-content-container">
-                                <div class="anons-text-wrapper">
-                                    <p class="list-title yellow">- игры и упражнения, развивающие:</p>
-                                    <ul>
-                                        <li>внимание</li>
-                                        <li>память</li>
-                                        <li>воображение</li>
-                                        <li>образное мышление</li>
-                                        <li>речь и дикцию</li>
-                                        <li>спонтанность</li>
-                                        <li>эмоциональный интеллект</li>
-                                        <li>психологическую устойчивость</li>
-                                    </ul>
-                                </div>
-                                <div class="anons-text-wrapper">
-                                    <p class="list-title yellow">- выступления:</p>
-                                    <ul>
-                                        <li>спектакли</li>
-                                        <li>концерты</li>
-                                        <li>новогодние представления</li>
-                                    </ul>
-                                </div>
-                                <div class="anons-text-wrapper">
-                                    <p class="list-title yellow">- съемки:</p>
-                                    <ul>
-                                        <li>костюмированные фотосессии</li>
-                                        <li>видеоролики</li>
-                                        <li>театральные миниатюры</li>
-                                    </ul>
-                                </div>
+                        <div class="awards__carousel" id="awardsCarousel">
+                            <div class="awards__track" id="awardsTrack">
+                                <img src="img/11.jpg" alt="Награда 1" class="awards__slide">
+                                <img src="img/12.jpg" alt="Награда 2" class="awards__slide">
+                                <img src="img/13.jpg" alt="Награда 3" class="awards__slide">
+                                <img src="img/14.jpg" alt="Награда 4" class="awards__slide">
+                                <img src="img/15.jpg" alt="Награда 5" class="awards__slide">
+                                <img src="img/16.jpg" alt="Награда 6" class="awards__slide">
+                                <img src="img/17.jpg" alt="Награда 7" class="awards__slide">
+                                <img src="img/18.jpg" alt="Награда 8" class="awards__slide">
+                                <img src="img/19.jpg" alt="Награда 9" class="awards__slide">
+                                <img src="img/20.jpg" alt="Награда 10" class="awards__slide">
+                                <img src="img/21.jpg" alt="Награда 11" class="awards__slide">
                             </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="block fourth-block">
-                    <div class="container">
-                        &nbsp;
-                    </div>
-                </div>
-
-                <div class="block">
-                    <div class="container"></div>
-                </div>
-
-                <div class="block hand">
-                    <div class="container alt">
-                        <div class="img hand"></div>
-                        <div class="block-text flexible">
-                            <p>Мы приглашаем вас присоединиться</p>
-                            <p>и стать частью нашей команды</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block info">
-                    <div class="container alt">
-                        <div class="column-wrapper">
-                            <div class="img ph9"></div>
-                            <div class="content">
-                                <div class="text-wrapper">
-                                    <span style="color:red">«Наша искренность - вам!»</span> - это девиз Театра, который по традиции всегда звучит после каждого выступления!
-                               </div>
-                            </div>
-                            <div class="img ph13"></div>
-                        </div>
-                        <div class="column-wrapper">
-                            <div class="content">
-                                <div class="text-wrapper">
-                                    Театральная сцена студии <span class="vip">«ИСКРА»</span> позволяет всем участникам труппы не только смело развивать свои актерские способности, но и разносторонне, многогранно, глубоко познавать мир!
-                                </div>
-                            </div>
-                            <div class="img ph3"></div>
-                            <div class="content">
-                                <div class="text-wrapper">
-                                    И по традиции в каждой нашей постановке зрителя ждут три финала, отсылки к предыдущим спектаклям и любимое слово <span class="vip">«ИСКРА»</span> - этим наш Театр создает свою особую интригующую уникальную атмосферу!
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block gallery" id="gallery">
-                    <div class="container alt">
-                        <div class="gallery-carousel-wrap">
-                            <button class="carousel-arrow left" type="button" aria-label="Влево"></button>
-                            <div class="gallery-carousel" id="gallery-carousel">
-                                <img src="img/IskraPhoto1.jpg" alt="">
-                                <img src="img/IskraPhoto2.jpg" alt="">
-                                <img src="img/IskraPhoto05.jpg" alt="">
-                                <img src="img/IskraPhoto12.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto14.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto24.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto11.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto7.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto27.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto25.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto6.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto22.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto15.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto17.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto4.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto8.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto10.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto30.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto20.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto21.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto19.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto23.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto28.jpg" alt="" loading="lazy">
-                                <img src="img/IskraPhoto26.jpg" alt="" loading="lazy">
-                            </div>
-                            <button class="carousel-arrow right" type="button" aria-label="Вправо"></button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="block">
-                    <div class="container"></div>
-                </div>
-
-                <div class="block awards" id="awards">
-                    <div class="container awards-flex" style="padding:0">
-                        <section class="awards-section">
-                            <div class="awards-title">НАШИ НАГРАДЫ</div>
-                            <div class="awards-envelope-bg">
-                                <div class="awards-carousel" id="awards-carousel">
-                                    <img src="img/11.jpg" alt="Диплом 1">
-                                    <img src="img/12.jpg" alt="Диплом 2">
-                                    <img src="img/13.jpg" alt="Диплом 3">
-                                    <img src="img/14.jpg" alt="Диплом 4" loading="lazy">
-                                    <img src="img/15.jpg" alt="Диплом 5" loading="lazy">
-                                    <img src="img/16.jpg" alt="Диплом 6" loading="lazy">
-                                    <img src="img/17.jpg" alt="Диплом 7" loading="lazy">
-                                    <img src="img/18.jpg" alt="Диплом 8" loading="lazy">
-                                    <img src="img/19.jpg" alt="Диплом 9" loading="lazy">
-                                    <img src="img/20.jpg" alt="Диплом 10" loading="lazy">
-                                    <img src="img/21.jpg" alt="Диплом 11" loading="lazy">
-                                </div>
-                                <button class="carousel-arrow2 left" type="button" aria-label="Влево"></button>
-                                <button class="carousel-arrow2 right" type="button" aria-label="Вправо"></button>
-                            </div>
-                            <div class="awards-subtitle">
-                                ТЕАТР-СТУДИЯ <span class="vip">«ИСКРА»</span><br>РЕГУЛЯРНО ПРИНИМАЕТ УЧАСТИЕ<br>В МЕЖДУНАРОДНЫХ КОНКУРСАХ И ФЕСТИВАЛЯХ
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <div class="block">
-                    <div class="container" style="padding-bottom:0"></div>
-                </div>
-
-                <div class="block other">
-                    <div class="container">
-                        <section class="find-us-section">
-                            <div class="find-us-flex">
-                                <div class="img clown"></div>
-                                <div class="find-us-info">
-                                    <p style="margin-top: 0;">
-                                        Театр <span class="vip">«ИСКРА»</span> ПРИГЛАШАЕТ на свои выступления!
-                                    </p>
-                                    <p>
-                                        Для юных артистов театральной студии лучшая награда - аплодисменты наших дорогих зрителей!
-                                    </p>
-                                    <p style="color:red">
-                                        Наше ближайшее выступление:
-                                    </p>
-                                    <ul style="padding-left: 16px;">
-                                        <li style="padding: 0.5em 0;">28 августа 2025 г.</li>
-                                        <li style="padding: 0.5em 0;">площадка «Песочница»</li>
-                                        <li style="padding: 0.5em 0;">спектакль «Шерлок Холмс» (по мотивам пьесы 1899г. Уильяма Жилетта и сэра Артура Конана Дойла)</li>
-                                    </ul>
-                                    <p>
-                                        Следите за нашими анонсами в <a href="https://instagram.com/teatr_iskra" target="_blank" style="color:red">Инстаграм</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-                    </div>
-                </div>
-
-                <div class="block slogan">
-                    <div class="container">
-                        &nbsp;
+                        <button class="awards__arrow awards__arrow--next" type="button" aria-label="Следующая награда">
+                            &#10095;
+                        </button>
                     </div>
                 </div>
             </div>
-         </main>
-        <footer id="contacts">
-            <div class="contacts-bar iskra">
-                <span><b>Звоните/пишите:</b>
-                  <a href="tel:+375296878989">+375 29 68 78 989</a> (Telegram, WhatsApp) |
-                  <a href="tel:+375296878988">+375 29 68 78 988</a> (Viber)
-                </span>
-                <span><b>Адрес:</b> <span class="map-marker" id="openMap" aria-label="Открыть карту"></span> пр-т. Машерова 11, корп. «Наследие», 7 эт., зал «ИСКРА»</span>
-                <span><b>Транспорт:</b> Шаговая доступность от ст.метро Пл. Победы, Я. Коласа,<br>трамваи 3,4,5, троллейбусы 29,40,40а, автобусы 18,24,26,39<br>Довезут прямо до входа в наше здание.</span>
-                <span><b>Instagram:</b>
-                  <a href="https://instagram.com/teatr_iskra" target="_blank" rel="noopener">@teatr_iskra</a>
-                </span>
-                <span><b>ООО «Детский театр-студия ИСКРА Елены Борисовой»</b> Рег. номер 193709454</span>
+        </section>
+
+        <section class="invitation" id="invitation">
+            <div class="container">
+                <div class="invitation__content">
+                    <div class="invitation__text">
+                        <img class="invitation__star" src="img/star.png" alt="" aria-hidden="true">
+                        В новом юбилейном сезоне<br>
+                        театр <span>«ИСКРА»</span> приглашает!
+                        <div class="invitation__arrow" aria-hidden="true">⤵</div>
+                    </div>
+
+                    <div class="invitation__divider"></div>
+
+                    <div class="invitation__location">
+                        <span class="invitation__location-icon mi">location_on</span>
+                        <div class="invitation__text">
+                            в новый просторный зал<br>
+                            (пр-т Машерова, 11/1, 7 этаж)
+                        </div>
+                    </div>
+
+                    <div class="invitation__divider wide"></div>
+
+                    <div class="invitation__text">
+                        на занятия по актёрскому мастерству<br>
+                        детей младшего возраста <strong>(от 6 лет)</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="invitation2" id="invitation2">
+            <div class="container">
+                <div class="invitation2__grid">
+                    <div class="invitation2__cell invitation2__cell--title">
+                        <h2 class="invitation2__title">
+                            На занятиях по<br>
+                            <strong>актёрскому<br> мастерству</strong> детей ждут:
+                        </h2>
+                    </div>
+
+                    <div class="invitation2__cell invitation2__cell--left">
+                        <h3 class="invitation2__subtitle">игры и упражнения,<br> развивающие</h3>
+
+                        <ul class="invitation2__list">
+                            <li>внимание</li>
+                            <li>память</li>
+                            <li>воображение</li>
+                            <li>образное мышление</li>
+                            <li>речь и дикцию</li>
+                            <li>спонтанность</li>
+                            <li>эмоциональный интеллект</li>
+                            <li>психологическую устойчивость</li>
+                        </ul>
+                    </div>
+
+                    <div class="invitation2__cell invitation2__cell--right">
+                        <div class="invitation2__group">
+                            <h3 class="invitation2__subtitle">выступления</h3>
+                            <p class="invitation2__inline">
+                                спектакли <span>•</span> концерты <span>•</span> новогодние представления
+                            </p>
+                        </div>
+
+                        <div class="invitation2__group">
+                            <h3 class="invitation2__subtitle">съёмки</h3>
+                            <p class="invitation2__inline">
+                                костюмированные фотосессии <span>•</span> видеоролики <span>•</span> театральные миниатюры
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="gallery__viewport-wrap">
+                    <button class="gallery__arrow gallery__arrow--prev" type="button" aria-label="Предыдущее фото">
+                        &#10094;
+                    </button>
+
+                    <div class="gallery__viewport">
+                        <div class="gallery__track" id="galleryTrack">
+                            <img src="img/IskraPhoto1.jpg" alt="Фото 1" class="gallery__slide">
+                            <img src="img/IskraPhoto2.jpg" alt="Фото 2" class="gallery__slide">
+                            <img src="img/IskraPhoto3.jpg" alt="Фото 3" class="gallery__slide">
+                            <img src="img/IskraPhoto4.jpg" alt="Фото 4" class="gallery__slide">
+                            <img src="img/IskraPhoto5.jpg" alt="Фото 5" class="gallery__slide">
+                            <img src="img/IskraPhoto6.jpg" alt="Фото 6" class="gallery__slide">
+                            <img src="img/IskraPhoto7.jpg" alt="Фото 7" class="gallery__slide">
+                            <img src="img/IskraPhoto8.jpg" alt="Фото 8" class="gallery__slide">
+                            <img src="img/IskraPhoto9.jpg" alt="Фото 9" class="gallery__slide">
+                            <img src="img/IskraPhoto10.jpg" alt="Фото 10" class="gallery__slide">
+                            <img src="img/IskraPhoto11.jpg" alt="Фото 11" class="gallery__slide">
+                            <img src="img/IskraPhoto12.jpg" alt="Фото 12" class="gallery__slide">
+                            <img src="img/IskraPhoto13.jpg" alt="Фото 13" class="gallery__slide">
+                            <img src="img/IskraPhoto14.jpg" alt="Фото 14" class="gallery__slide">
+                            <img src="img/IskraPhoto15.jpg" alt="Фото 15" class="gallery__slide">
+                            <img src="img/IskraPhoto16.jpg" alt="Фото 16" class="gallery__slide">
+                            <img src="img/IskraPhoto17.jpg" alt="Фото 17" class="gallery__slide">
+                            <img src="img/IskraPhoto18.jpg" alt="Фото 18" class="gallery__slide">
+                            <img src="img/IskraPhoto19.jpg" alt="Фото 19" class="gallery__slide">
+                            <img src="img/IskraPhoto20.jpg" alt="Фото 20" class="gallery__slide">
+                            <img src="img/IskraPhoto21.jpg" alt="Фото 21" class="gallery__slide">
+                            <img src="img/IskraPhoto22.jpg" alt="Фото 22" class="gallery__slide">
+                            <img src="img/IskraPhoto23.jpg" alt="Фото 23" class="gallery__slide">
+                            <img src="img/IskraPhoto24.jpg" alt="Фото 24" class="gallery__slide">
+                            <img src="img/IskraPhoto25.jpg" alt="Фото 25" class="gallery__slide">
+                            <img src="img/IskraPhoto26.jpg" alt="Фото 26" class="gallery__slide">
+                            <img src="img/IskraPhoto27.jpg" alt="Фото 27" class="gallery__slide">
+                            <img src="img/IskraPhoto28.jpg" alt="Фото 28" class="gallery__slide">
+                            <img src="img/IskraPhoto29.jpg" alt="Фото 29" class="gallery__slide">
+                            <img src="img/IskraPhoto30.jpg" alt="Фото 30" class="gallery__slide">
+                        </div>
+                    </div>
+
+                    <button class="gallery__arrow gallery__arrow--next" type="button" aria-label="Следующее фото">
+                        &#10095;
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="schedule" id="schedule">
+            <div class="container">
+                <h2 class="schedule__title">РАСПИСАНИЕ</h2>
+
+                <div class="schedule__row schedule__row--wide">
+                    <div class="schedule__time">17:00</div>
+                    <div class="schedule__text">
+                        Младшая группа<br>Понедельник – Четверг
+                    </div>
+                </div>
+
+                <div class="schedule__divider"></div>
+
+                <div class="schedule__row">
+                    <div class="schedule__time">17:30</div>
+                    <div class="schedule__text">
+                        Старшая группа<br>Среда – Суббота
+                    </div>
+                </div>
+
+                <div class="schedule__row">
+                    <div class="schedule__time">12:00</div>
+                    <div class="schedule__text"><br>Воскресенье</div>
+                </div>
+
+                <div class="schedule__price">
+                    <div class="schedule__price-title">Стоимость</div>
+                    <div class="schedule__price-text">
+                        Стоимость занятия - <b>15 р</b>.<br>
+                        <b>120 р</b>. в месяц.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="rent" id="rent">
+            <div class="container">
+                <div class="rent__grid">
+                    <div class="rent__media">
+                        <video class="rent__video"
+                            id="rentVideo"
+                            src="img/Zal.mp4"
+                            poster="img/Zal-poster.png"
+                            preload="metadata"
+                            playsinline
+                        ></video>
+
+                        <button class="rent__play" id="rentPlay" type="button" aria-label="Воспроизвести видео">
+                            <span class="rent__play-circle"></span>
+                        </button>
+                    </div>
+
+                    <div class="rent__content">
+                        <h2 class="rent__title">ПРЕДЛАГАЕМ<br>СУБ-АРЕНДУ</h2>
+
+                        <div class="rent__card">
+                            <img class="rent__key" src="img/key.png" alt="" aria-hidden="true">
+
+                            <ul class="rent__list">
+                                <li>
+                                    <img src="img/star-red.png" alt="" aria-hidden="true">
+                                    <span>Идеально для корпоративных мероприятий, встреч, презентаций, тим-билдингов, мастер-классов, лекций и так далее</span>
+                                </li>
+                                <li>
+                                    <img src="img/star-red.png" alt="" aria-hidden="true">
+                                    <span>Наше помещение 238 кв.м.</span>
+                                </li>
+                                <li>
+                                    <img src="img/star-red.png" alt="" aria-hidden="true">
+                                    <span>Выгодные условия по расписанию</span>
+                                </li>
+                                <li>
+                                    <img src="img/star-red.png" alt="" aria-hidden="true">
+                                    <span>Две раздевалки, комната для инвентаря</span>
+                                </li>
+                            </ul>
+
+                            <div class="rent__divider"></div>
+
+                            <div class="rent__price">Аренда почасовая от 40 руб.</div>
+
+                            <a href="#contact" class="rent__button">Свяжитесь с нами</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact__header">
+                    <img class="contact__title-img" src="img/visitus.png" alt="Visit us!">
+                    <img class="contact__subtitle-img" src="img/subtitle.png" alt="С нетерпением ждём встречи с Вами!">
+                </div>
+
+                <div class="contact__grid">
+                    <div class="contact__map-wrap">
+                        <img class="contact__map" src="img/address.png" alt="Схема проезда к театру-студии ИСКРА">
+                    </div>
+
+                    <div class="contact__info">
+                        <div class="contact__item">
+                            <span class="contact__icon mi">location_on</span>
+                            <div class="contact__item-content">
+                                <div class="contact__label">Адрес</div>
+                                <div class="contact__text">
+                                    пр-т. Машерова 11 / 1, корп. «Наследие», 7 этаж, зал «ИСКРА»
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__item">
+                            <span class="contact__icon mi">mail</span>
+                            <div class="contact__item-content">
+                                <div class="contact__label">Email</div>
+                                <a class="contact__link" href="mailto:elena.borisova.minsk@gmail.com">
+                                    elena.borisova.minsk@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact__item">
+                            <span class="contact__icon mi">directions_bus</span>
+                            <div class="contact__item-content">
+                                <div class="contact__label">Транспорт</div>
+                                <div class="contact__text">
+                                    Шаговая доступность от ст. метро Пл. Победы; ст. метро Я. Коласа;
+                                    трамваи 3, 4, 5; троллейбусы 29, 40, 40а; автобусы 18, 24, 26, 39...<br>
+                                    Довезут прямо до входа в наше здание.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__item">
+                            <span class="contact__icon mi">call</span>
+                            <div class="contact__item-content">
+                                <div class="contact__label">Телефон</div>
+                                <div class="contact__text">
+                                    WhatsApp/Telegram:
+                                    <a class="contact__link small" href="tel:+375296878988">+375 29 687 89 88</a><br>
+                                    Звонки:
+                                    <a class="contact__link small" href="tel:+375296878989">+375 29 687 89 89</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__item">
+                            <span class="contact__icon mi">photo_camera</span>
+                            <div class="contact__item-content">
+                                <div class="contact__label">Instagram</div>
+                                <a class="contact__link" href="https://instagram.com/teatr_iskra" target="_blank" rel="noopener">
+                                    @teatr_iskra
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer__decor" aria-hidden="true">
+            <img src="img/star-1.png" alt="" class="footer__star footer__star--big">
+            <img src="img/star-2.png" alt="" class="footer__star footer__star--small">
+            <img src="img/footer-1.png" alt="" class="footer__kids">
+        </div>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__brand">
+                        <img src="img/logo.png" alt="ИСКРА — логотип" class="footer__logo">
+                    </div>
+
+                    <div class="footer__social">
+                        <a class="ig" href="https://instagram.com/teatr_iskra" target="_blank" rel="noopener" aria-label="Instagram ИСКРА">
+                            <svg width="2.2em" height="2.2em" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a class="ig-handle" href="https://instagram.com/teatr_iskra" target="_blank" rel="noopener">@teatr_iskra</a>
+                    </div>
+
+                    <nav class="footer__nav" aria-label="Быстрый доступ">
+                        <h3 class="footer__title">Быстрый доступ</h3>
+                        <ul class="footer__links">
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#awards">Награды</a></li>
+                            <li><a href="#invitation">Новый сезон</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
+                            <li><a href="#schedule">Расписание</a></li>
+                            <li><a href="#rent">Аренда</a></li>
+                            <li><a href="#contact">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="footer__divider" aria-hidden="true"></div>
+
+                <div class="footer__legal">
+                    ООО «Детский театр-студия ИСКРА Елены Борисовой».&nbsp;Рег. номер 193709454
+                </div>
             </div>
         </footer>
     </div>
-    <div id="mapModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn" id="closeMap">&times;</span>
-            <iframe src="https://www.google.com/maps?q=пр-т+Машерова+11,+Минск&output=embed"
-                    width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('gallery-carousel');
-            const left  = document.querySelector('.carousel-arrow.left');
-            const right = document.querySelector('.carousel-arrow.right');
-            const scrollStep = 350; // px
+        (function () {
+            const toggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
 
-            function updateArrows() {
-                left.style.visibility = (carousel.scrollLeft > 10) ? 'visible' : 'hidden';
-                right.style.visibility = (carousel.scrollLeft + carousel.clientWidth < carousel.scrollWidth - 10) ? 'visible' : 'hidden';
+            if (!toggle || !mobileMenu) return;
+
+            function closeMenu() {
+                document.body.classList.remove('menu-open');
+                toggle.setAttribute('aria-expanded', 'false');
+                mobileMenu.hidden = true;
             }
 
-            left?.addEventListener('click', () => {
-                carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-                setTimeout(updateArrows, 400);
-            });
-            right?.addEventListener('click', () => {
-                carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
-                setTimeout(updateArrows, 400);
-            });
-
-            carousel.addEventListener('scroll', updateArrows);
-            updateArrows();
-
-            window.addEventListener('resize', updateArrows);
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            const carousel = document.getElementById('awards-carousel');
-            const left  = document.querySelector('.carousel-arrow2.left');
-            const right = document.querySelector('.carousel-arrow2.right');
-            const scrollStep = carousel.offsetWidth * 0.75;
-
-            function updateArrows() {
-                if (!left || !right || !carousel) return;
-                // округляем до 1px, чтобы не было эффекта "почти в конце"
-                const maxScroll = Math.ceil(carousel.scrollWidth - carousel.clientWidth - 2);
-                left.style.visibility = (carousel.scrollLeft > 1) ? 'visible' : 'hidden';
-                right.style.visibility = (carousel.scrollLeft < maxScroll) ? 'visible' : 'hidden';
+            function openMenu() {
+                document.body.classList.add('menu-open');
+                toggle.setAttribute('aria-expanded', 'true');
+                mobileMenu.hidden = false;
             }
 
-            left?.addEventListener('click', () => {
-                carousel.scrollBy({ left: -scrollStep, behavior: 'smooth' });
-                setTimeout(updateArrows, 500);
-            });
-            right?.addEventListener('click', () => {
-                carousel.scrollBy({ left: scrollStep, behavior: 'smooth' });
-                setTimeout(updateArrows, 500);
-            });
-
-            carousel.addEventListener('scroll', updateArrows);
-            window.addEventListener('resize', updateArrows);
-
-            setTimeout(updateArrows, 200);
-        });
-        document.addEventListener('DOMContentLoaded', function() {
-            const openMapBtn = document.getElementById('openMap');
-            const mapModal = document.getElementById('mapModal');
-            const closeMapBtn = document.getElementById('closeMap');
-
-            openMapBtn.addEventListener('click', () => {
-                mapModal.style.display = 'block';
-            });
-            openMapBtn.setAttribute('role','button');
-            openMapBtn.setAttribute('tabindex','0');
-            openMapBtn.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); mapModal.style.display = 'block'; }
-            });
-            closeMapBtn.addEventListener('click', () => {
-                mapModal.style.display = 'none';
-            });
-            window.addEventListener('click', (e) => {
-                if (e.target === mapModal) {
-                    mapModal.style.display = 'none';
+            toggle.addEventListener('click', function () {
+                const isOpen = document.body.classList.contains('menu-open');
+                if (isOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
                 }
             });
-            // Закрытие по Esc
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && mapModal.style.display === 'block') {
-                    mapModal.style.display = 'none';
-                    openMapBtn.focus();
+
+            mobileMenu.querySelectorAll('a').forEach((link) => {
+                link.addEventListener('click', function () {
+                    closeMenu();
+                });
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeMenu();
                 }
             });
-        });
+        })();
+    </script>
+    <script>
+        (function () {
+            const track = document.getElementById('awardsTrack');
+            if (!track) return;
+
+            let slides = Array.from(track.querySelectorAll('.awards__slide'));
+            const prevBtn = document.querySelector('.awards__arrow--prev');
+            const nextBtn = document.querySelector('.awards__arrow--next');
+
+            function render() {
+                const mobile = window.innerWidth <= 800;
+
+                slides.forEach((slide) => {
+                    slide.classList.remove('is-active', 'is-near', 'is-far', 'is-hidden');
+                });
+
+                if (mobile) {
+                    slides.forEach((slide, index) => {
+                        if (index === 1) {
+                            slide.classList.add('is-active');   // центральная
+                        } else if (index === 0 || index === 2) {
+                            slide.classList.add('is-near');     // по одной слева и справа
+                        } else {
+                            slide.classList.add('is-hidden');
+                        }
+                    });
+                    return;
+                }
+
+                // desktop: центр = 3-й элемент массива
+                slides.forEach((slide, index) => {
+                    if (index === 2) {
+                        slide.classList.add('is-active');
+                    } else if (index === 1 || index === 3) {
+                        slide.classList.add('is-near');
+                    } else if (index === 0 || index === 4) {
+                        slide.classList.add('is-far');
+                    } else {
+                        slide.classList.add('is-hidden');
+                    }
+                });
+            }
+
+            function next() {
+                slides.push(slides.shift());
+                slides.forEach(slide => track.appendChild(slide));
+                render();
+            }
+
+            function prev() {
+                slides.unshift(slides.pop());
+                slides.forEach(slide => track.appendChild(slide));
+                render();
+            }
+
+            nextBtn?.addEventListener('click', next);
+            prevBtn?.addEventListener('click', prev);
+
+            window.addEventListener('resize', render);
+
+            render();
+        })();
+    </script>
+    <script>
+        (function () {
+            const track = document.getElementById('galleryTrack');
+            if (!track) return;
+
+            let slides = Array.from(track.querySelectorAll('.gallery__slide'));
+            const prevBtn = document.querySelector('.gallery__arrow--prev');
+            const nextBtn = document.querySelector('.gallery__arrow--next');
+
+            function render() {
+                slides.forEach((slide) => {
+                    slide.classList.remove('is-active', 'is-near', 'is-hidden');
+                });
+
+                slides.forEach((slide, index) => {
+                    if (index === 1) {
+                        slide.classList.add('is-active');
+                    } else if (index === 0 || index === 2) {
+                        slide.classList.add('is-near');
+                    } else {
+                        slide.classList.add('is-hidden');
+                    }
+                });
+            }
+
+            function next() {
+                slides.push(slides.shift());
+                slides.forEach(slide => track.appendChild(slide));
+                render();
+            }
+
+            function prev() {
+                slides.unshift(slides.pop());
+                slides.forEach(slide => track.appendChild(slide));
+                render();
+            }
+
+            nextBtn?.addEventListener('click', next);
+            prevBtn?.addEventListener('click', prev);
+
+            render();
+        })();
+    </script>
+    <script>
+        (function () {
+            const video = document.getElementById('rentVideo');
+            const playBtn = document.getElementById('rentPlay');
+            const media = playBtn?.closest('.rent__media');
+
+            if (!video || !playBtn || !media) return;
+
+            playBtn.addEventListener('click', async function () {
+                try {
+                    video.setAttribute('controls', 'controls');
+                    await video.play();
+                    media.classList.add('is-playing');
+                } catch (e) {
+                    console.error('Не удалось запустить видео', e);
+                }
+            });
+
+            video.addEventListener('pause', function () {
+                if (video.currentTime < 0.2 || video.ended) {
+                    media.classList.remove('is-playing');
+                }
+            });
+
+            video.addEventListener('ended', function () {
+                media.classList.remove('is-playing');
+            });
+        })();
     </script>
 </body>
 </html>
