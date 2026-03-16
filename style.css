@@ -1320,12 +1320,26 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 .invitation3__grid{
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    grid-template-rows: auto auto auto;
     gap: var(--space-0);
-    align-items: start;
     max-width: var(--container-wide);
     margin: 0 auto;
+    align-items: stretch;
+}
+
+.invitation3__grid.grid_1 {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+.invitation3__grid.grid_2 {
+    grid-template-columns: 310px 1fr;
+}
+
+.invitation3__grid.grid_3 {
+    grid-template-columns: 1fr 23em;
+}
+
+.invitation3__grid.grid_4 {
+    grid-template-columns: 1fr 35em;
 }
 
 /* верхнее левое фото */
@@ -1334,22 +1348,22 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 }
 
 .invitation3__photo img{
-    display: block;
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 
 .invitation3__photo--top{
-    z-index: 2;
-    margin-left: -1em;
-    margin-top: -3em;
-    margin-bottom: -1em;
+    z-index: 3;
+    overflow: hidden;
+    min-height: 0;
+    align-self: stretch;
     position: relative;
-}
-
-.invitation3__photo--top img{
-    height: 100%;
+    margin: -3em 0 -1em;
 }
 
 /* верхняя правая белая плашка */
@@ -1359,6 +1373,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2em;
 }
 
 .invitation3__title-img{
@@ -1378,7 +1393,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 .invitation3__star--black{
     position: absolute;
     left: 3em;
-    bottom: -2em;
+    bottom: 0;
     width: 4em;
     height: auto;
 }
@@ -1392,7 +1407,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 }
 
 .invitation3__card--left{
-    margin-left: 2em;
+    margin-left: 1em;
     margin-top: 4em;
     padding: 6.3em 2.4em 2.4em 2.4em;
 }
@@ -1400,7 +1415,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 .invitation3__rombs{
     position: absolute;
     top: -3.1em;
-    right: 45%;
+    right: 8%;
     width: 8em;
     height: auto;
 }
@@ -1411,7 +1426,6 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     font-size: 1.8em;
     line-height: 1;
     font-weight: 200;
-    max-width: 54%;
 }
 
 .invitation3__card-text b{
@@ -1421,26 +1435,24 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 /* центральное фото */
 .invitation3__photo--middle{
     grid-column: 2;
-    grid-row: 2;
-    margin-left: -11em;
-    z-index: 1;
-}
-
-.invitation3__photo--middle img{
-
+    z-index: 2;
+    overflow: hidden;
+    min-height: 0;
+    align-self: stretch;
+    position: relative;
 }
 
 /* баннер поверх центрального фото */
 .invitation3__banner{
     position: absolute;
     right: -1em;
-    bottom: 30%;
     z-index: 3;
     background: var(--invitation3-red);
     color: #fff;
     border-radius: 1.3em;
     padding: 1.8em 3em;
     width: 35em;
+    margin-top: -4em;
 }
 
 .invitation3__banner-title{
@@ -1459,35 +1471,29 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 /* нижнее левое фото */
 .invitation3__photo--bottom{
     grid-column: 1;
-    grid-row: 3;
-    margin-top: -1em;
-    margin-right: -16em;
     z-index: 2;
-    max-height: 34em;
     overflow: hidden;
-}
-
-.invitation3__photo--bottom img{
-
+    min-height: 0;
+    align-self: stretch;
+    position: relative;
 }
 
 /* правая нижняя карточка */
 .invitation3__card--right{
     grid-column: 2;
-    grid-row: 3;
-    min-height: 29em;
-    padding: 6.8em 2.2em 2.2em 2.2em;
+    padding: 12.5em 2.2em 5.2em 2.2em;
     border-width: 1px 1px 1px 0;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 3em;
+    margin-bottom: 1em;
+    margin-right: 2em;
 }
 
 .invitation3__star--red{
     position: absolute;
-    top: 2em;
-    right: 40%;
+    top: 7em;
+    left: 12%;
     width: 5em;
     height: auto;
 }
@@ -1496,96 +1502,85 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     text-align: right;
 }
 
-/* ===== 1100- ===== */
-@media (max-width: 1100px){}
-
 /* ===== 800- ===== */
 @media (max-width: 800px){
+    .invitation3__grid.grid_1 {
+        grid-template-columns: 1fr 1.1fr;
+    }
+
+    .invitation3__grid.grid_2 {
+        grid-template-columns: 19em 1fr;
+    }
+
+    .invitation3__grid.grid_3 {
+        grid-template-columns: 1fr 21em;
+    }
+
     .invitation3__card--left{
         border: none;
         padding-left: 2em;
     }
 
     .invitation3__card-text {
-        font-size: 1.4em;
-        max-width: 45%;
+        font-size: 1.6em;
     }
 
     .invitation3__card--right{
         border: none;
-        padding-top: 6em;
-        padding-bottom: 0;
-        padding-right: 3em;
-        min-height: 26em;
+        padding-top: 11em;
+        padding-bottom: 4em;
+    }
+
+    .invitation3__star--red {
+        width: 3em;
     }
 
     .invitation3__rombs {
-        top: -2em;
-        right: 48%;
+        top: -1em;
+        right: 16%;
         width: 6em;
     }
 
     .invitation3__star--black {
-        left: 2em;
+        left: 3em;
+        bottom: 1em;
         width: 3em;
     }
 
-    .invitation3__star--red {
+    .invitation3__heart {
         top: 2em;
-        right: 35%;
+        right: 7em;
         width: 3em;
-    }
-
-    .invitation3__photo--bottom {
-        max-height: 30em;
-    }
-}
-
-@media (max-width: 720px){
-    .invitation3__card--left {
-        padding-top: 4em;
-        padding-left: 1em;
-    }
-
-    .invitation3__rombs {
-        width: 5em;
-        right: 55%;
-    }
-
-    .invitation3__card-text {
-        font-size: 1.3em;
     }
 
     .invitation3__banner {
         border-radius: 1.2em;
         padding: 1.5em 2em;
-        width: 28em;
+        width: 31em;
     }
 
     .invitation3__banner-title {
-        font-size: 2.2em;
+        font-size: 2.4em;
     }
 
     .invitation3__banner-text {
-        font-size: 1.2em;
-    }
-
-    .invitation3__photo--bottom {
-        max-height: 28em;
-        margin-right: -12em;
-    }
-
-    .invitation3__card--right {
-        min-height: 24em;
-    }
-
-    .invitation3__photo--middle {
-        margin-left: -10em;
+        font-size: 1.3em;
     }
 }
 
-/* ===== 600- ===== */
 @media (max-width: 600px){
+    .invitation3__grid.grid_1 {
+        grid-template-columns: 1fr 1.1fr;
+    }
+
+    .invitation3__grid.grid_2 {
+        grid-template-columns: 17em 1fr;
+    }
+
+    .invitation3__grid.grid_3 {
+        grid-template-columns: 1fr 18em;
+    }
+
     .invitation3__title-img{
         width: 90%;
     }
@@ -1600,13 +1595,20 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
         width: 2.5em;
     }
 
+    .invitation3__star--red {
+        top: 5em;
+    }
+
     .invitation3__card-text {
-        font-size: 1.2em;
-        max-width: 50%;
+        font-size: 1.3em;
+    }
+
+    .invitation3__rombs {
+        width: 5em;
     }
 
     .invitation3__banner{
-        width: 27em;
+        width: 26em;
     }
 
     .invitation3__banner-title{
@@ -1617,12 +1619,54 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
         font-size: 1.1em;
     }
 
-    .invitation3__card-text--right{
-        font-size: 1.2em;
+    .invitation3__card--right {
+        padding-right: 2em;
+        padding-top: 9em;
+        padding-bottom: 3em;
+    }
+}
+
+@media (max-width: 450px){
+    .invitation3__grid.grid_2 {
+        grid-template-columns: 15em 1fr;
+    }
+
+    .invitation3__grid.grid_3 {
+        grid-template-columns: 1fr 16em;
+    }
+
+    .invitation3__hero {
+        padding: 3em 0;
+    }
+
+    .invitation3__star--black {
+        left: 2em;
+    }
+
+    .invitation3__heart {
+        top: 1.3em;
+        right: 4em;
+    }
+
+    .invitation3__card--left {
+        padding: 5.5em 2em 2em 2.4em;
+        margin-left: 0;
     }
 
     .invitation3__card--right {
-        padding-right: 2em;
+        margin: 0;
+    }
+
+    .invitation3__banner{
+        width: 22em;
+    }
+
+    .invitation3__banner-title{
+        font-size: 1.6em;
+    }
+
+    .invitation3__banner-text{
+        font-size: 1em;
     }
 }
 
