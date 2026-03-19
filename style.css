@@ -10,6 +10,9 @@ html {
 @media (max-width: 600px) {
     html { font-size: 0.725em; }
 }
+@media (max-width: 480px) {
+    html { font-size: 0.685em; }
+}
 
 /* ===== Futura Cyrillic (семейство с весами) ===== */
 @font-face {
@@ -2048,7 +2051,6 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     }
 
     .schedule__price{
-        width: 65%;
         margin-top: var(--space-2);
         font-size: 1.7em;
         padding: var(--space-3);
@@ -2261,7 +2263,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 @media (max-width: 800px){
     .rent__grid{
         grid-template-columns: 1fr;
-        max-width: 75%;
+        max-width: 33em;
     }
 
     .rent__content{
