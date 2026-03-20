@@ -13,6 +13,9 @@ html {
 @media (max-width: 480px) {
     html { font-size: 0.685em; }
 }
+@media (max-width: 400px) {
+    html { font-size: 0.65em; }
+}
 
 /* ===== Futura Cyrillic (семейство с весами) ===== */
 @font-face {
@@ -1276,7 +1279,8 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
             "left"
             "right";
         gap: var(--space-4);
-        max-width: 800px;
+        max-width: 100%;
+        margin: 0 2em;
     }
 
     .invitation2__cell--right {
@@ -2462,6 +2466,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
     .contact__info{
         gap: var(--space-3);
+        margin: 0 2em;
     }
 }
 
