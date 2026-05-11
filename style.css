@@ -141,8 +141,20 @@ html {
     --invitation3-line: #b8b8b8;
 
     --schedule-bg: url('img/bg-schedule.png');
-    --schedule-red: rgba(180, 24, 20, 0.88);
-    --schedule-red-light: rgba(200, 48, 40, 0.78);
+    /* Красный оверлей секции schedule. Правится как единое целое (см. css-audit-inventory). */
+    --schedule-overlay: linear-gradient(
+        90deg,
+        rgba(180, 24, 20, 0.96) 0%,
+        rgba(180, 24, 20, 0.94) 42%,
+        rgba(200, 48, 40, 0.72) 78%,
+        rgba(200, 48, 40, 0.48) 100%
+    );
+    /* Вертикальный вариант оверлея для узких брейкпоинтов (≤800px и ≤600px). */
+    --schedule-overlay-stack: linear-gradient(
+        180deg,
+        rgba(180, 24, 20, 0.94) 0%,
+        rgba(180, 24, 20, 0.88) 100%
+    );
     --schedule-price-bg: rgba(80, 0, 0, 0.46);
 
     --rent-bg: url('img/bg-rent.png');
@@ -1840,14 +1852,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     content:"";
     position:absolute;
     inset:0;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(180, 24, 20, 0.96) 0%,
-            rgba(180, 24, 20, 0.94) 42%,
-            rgba(200, 48, 40, 0.72) 78%,
-            rgba(200, 48, 40, 0.48) 100%
-        );
+    background: var(--schedule-overlay);
     z-index:0;
 }
 
@@ -1998,12 +2003,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 /* ===== 800- ===== */
 @media (max-width: 800px){
     .schedule::before{
-        background:
-            linear-gradient(
-                180deg,
-                rgba(180, 24, 20, 0.94) 0%,
-                rgba(180, 24, 20, 0.88) 100%
-            );
+        background: var(--schedule-overlay-stack);
     }
 }
 
@@ -2014,12 +2014,7 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     }
 
     .schedule::before{
-        background:
-            linear-gradient(
-                180deg,
-                rgba(180, 24, 20, 0.94) 0%,
-                rgba(180, 24, 20, 0.88) 100%
-            );
+        background: var(--schedule-overlay-stack);
     }
 
     .schedule .container{
