@@ -184,6 +184,16 @@ body {
     overflow: hidden;
 }
 
+/* Сброс маркированных списков (маркер/иконка в li). */
+.hero-stats,
+.invitation2__list,
+.rent__list,
+.footer__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 /* === Иконки (Material Symbols) === */
 .mi {
     font-family: 'Material Symbols Rounded';
@@ -351,9 +361,6 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
 /* ===== HERO STATS ===== */
 .hero-stats {
-    list-style: none;
-    margin: 0;
-    padding: 0;
     position: absolute;
     right: 1.2em;
     top: 18vh;
@@ -690,13 +697,21 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     }
 }
 
-.awards {
+/* Полноэкранное фоновое изображение секций (позиция и картинка — у блока). */
+.awards,
+.invitation,
+.invitation2,
+.schedule,
+.rent {
     position: relative;
-    background-image: var(--awards-bg);
-    background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+}
+
+.awards {
+    background-image: var(--awards-bg);
+    background-position: top right;
 }
 
 .awards .container {
@@ -965,12 +980,8 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
 /* ===== INVITATION ===== */
 .invitation {
-    position: relative;
-    overflow: hidden;
     background-image: var(--invitation-bg);
     background-position: -8em top;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 .invitation::before {
@@ -1170,12 +1181,8 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
 /* ===== INVITATION 2 ===== */
 .invitation2 {
-    position: relative;
     background-image: var(--invitation2-bg);
     background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    overflow: hidden;
     color: var(--c-white);
 }
 
@@ -1238,12 +1245,6 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     font-weight: 500;
     line-height: 0.74;
     color: var(--c-red-alt);
-}
-
-.invitation2__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .invitation2__list li {
@@ -1833,18 +1834,11 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     }
 }
 
-/* ===== 600- ===== */
-@media (max-width: 600px) {}
-
 /* ===== SCHEDULE ===== */
 .schedule{
-    position: relative;
-    overflow: hidden;
     color: var(--c-white);
     background-image: var(--schedule-bg);
     background-position: right top;
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 /* красная подложка + мягкий градиент */
@@ -2060,12 +2054,8 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
 /* ===== RENT ===== */
 .rent{
-    position: relative;
-    overflow: hidden;
     background-image: var(--rent-bg);
     background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
     color: var(--c-white);
 }
 
@@ -2162,12 +2152,6 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
     width: 9em;
     height: auto;
     pointer-events: none;
-}
-
-.rent__list{
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .rent__list li{
@@ -2544,9 +2528,6 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 }
 
 .footer__links{
-    list-style: none;
-    padding: 0;
-    margin: 0;
     display: grid;
     grid-template-columns: repeat(2, minmax(8em, 1fr));
     gap: 0 2em;
