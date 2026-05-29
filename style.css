@@ -495,6 +495,10 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
 /* ===== мелкая мобильная доводка ===== */
 @media (max-width: 600px) {
+    .hero {
+        background-position-x: 55%;
+    }
+
     .topbar__nav a {
         font-size: 2.6em;
     }
@@ -1148,8 +1152,12 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
 /* ===== 600- ===== */
 @media (max-width: 600px) {
+    .invitation {
+        background-position-x: 15%;
+    }
+
     .invitation__content {
-        padding-left: var(--space-6);
+        padding-left: var(--space-5);
         margin-right: var(--space-0);
     }
 
@@ -1176,6 +1184,12 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
     .invitation__divider.wide {
         width: 87%;
+    }
+}
+
+@media (max-width: 400px) {
+    .invitation__arrow {
+        display: none;
     }
 }
 
@@ -1325,6 +1339,10 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 
 /* ===== 600- ===== */
 @media (max-width: 600px) {
+    .invitation2 {
+        background-position-x: 55%;
+    }
+
     .invitation2__grid {
         max-width: 480px;
     }
@@ -1815,6 +1833,10 @@ body.menu-open .topbar__menu-btn span:nth-child(3) {
 @media (max-width: 800px) {
     .gallery__track {
         gap: var(--space-1);
+    }
+
+    .gallery__slide {
+        max-width: calc(50% - var(--space-1) / 2);
     }
 
     .gallery__slide.is-active:hover {

@@ -162,7 +162,7 @@
 
                         <div class="awards__carousel" id="awardsCarousel">
                             <div class="awards__track" id="awardsTrack">
-                                <img src="img/11.JPG" alt="Награда 1" class="awards__slide">
+                                <img src="img/11.jpg" alt="Награда 1" class="awards__slide">
                                 <img src="img/23.JPG" alt="Награда 13" class="awards__slide">
                                 <img src="img/10.JPG" alt="Награда" class="awards__slide">
                                 <img src="img/22.JPG" alt="Награда 12" class="awards__slide">
@@ -675,11 +675,24 @@
             const nextBtn = document.querySelector('.gallery__arrow--next');
 
             function render() {
+                const mobile = window.innerWidth <= 800;
+
                 slides.forEach((slide) => {
                     slide.classList.remove('is-active', 'is-near', 'is-hidden');
                 });
 
                 slides.forEach((slide, index) => {
+                    if (mobile) {
+                        if (index === 1) {
+                            slide.classList.add('is-active');
+                        } else if (index === 0) {
+                            slide.classList.add('is-near');
+                        } else {
+                            slide.classList.add('is-hidden');
+                        }
+                        return;
+                    }
+
                     if (index === 1) {
                         slide.classList.add('is-active');
                     } else if (index === 0 || index === 2) {
@@ -704,6 +717,8 @@
 
             nextBtn?.addEventListener('click', next);
             prevBtn?.addEventListener('click', prev);
+
+            window.addEventListener('resize', render);
 
             render();
         })();
